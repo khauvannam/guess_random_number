@@ -12,9 +12,9 @@ document.querySelector(".check").addEventListener("click", function () {
     displayMessage("No number!");
   } else if (guess !== randomNumber) {
     if (score > 1) {
-      guess < randomNumber
-        ? displayMessage("TOO LOW! TRY AGAIN")
-        : displayMessage("TOO HIGH! TRY AGAIN");
+      displayMessage(
+        guess < randomNumber ? "TOO LOW! TRY AGAIN" : "TOO HIGH! TRY AGAIN"
+      );
       score--;
       document.querySelector(".score").textContent = score;
     } else {
